@@ -1,0 +1,34 @@
+$ratios: (
+		         movie: ((1080/1920)*100%),
+		         movie-poster: ((1920/1080)*100%),
+		         tv: ((960/1280)*100%),
+		         tv-poster: ((1280/960)*100%)
+         );
+
+.-ratio {
+	
+	&:before {
+		content: '';
+		display: block;
+	}
+	
+	position: relative;
+	border:1px solid red;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+	
+	@include media-breakpoint-up($breakpoint) {
+		
+		// infix will not output breakpoint for min width 0
+		// .stuff{xs}-stuff => .stuff-stuff
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		
+		@each $ratioName, $ratioValue in $ratios {
+			
+			.-ratio#{$infix}-#{$ratioName}:before {
+				padding-top: $ratioValue;
+			}
+		}
+	}
+}

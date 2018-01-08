@@ -46,6 +46,9 @@ component-libraries:
   base:
     paths:
       - components/_patterns/00-base
+  decorators:
+    paths:
+      - components/_patterns/00-decorators
   atoms:
     paths:
       - components/_patterns/01-atoms

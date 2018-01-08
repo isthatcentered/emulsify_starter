@@ -1,0 +1,1 @@
+The media is a container for a full width image/video

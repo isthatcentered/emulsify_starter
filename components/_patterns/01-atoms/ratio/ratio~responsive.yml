@@ -1,0 +1,28 @@
+#context:
+#  classes:
+#  - _outline
+#variants:
+#- name: default
+#  label: Movie
+#  context:
+#    type: movie
+#
+#- name: Movie Poster
+#  context:
+#    type: movie-poster
+#
+#- name: Tv
+#  context:
+#    type: tv
+#
+#- name: Tv Poster
+#  context:
+#    type: tv-poster
+#
+#- name: Responsive
+#  context:
+type: movie-poster
+breakpoints:
+  sm: tv-poster
+  md: movie-poster
+  lg: movie

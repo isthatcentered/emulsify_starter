@@ -1,0 +1,20 @@
+{# Base class name #}
+{% set seed = "-ratio" %}
+{% set seed_modifier = seed ~ "-" %}
+
+{# Add base class name + modifier #}
+{% set _classes = [
+	seed,
+	type ? seed_modifier ~ type : seed_modifier ~ "movie",
+	"_outline",
+] %}
+
+{# Add responsive modifiers if any #}
+{%- for breakpoint, value in breakpoints %}
+	{% set _classes = _classes | merge([
+		seed_modifier ~ breakpoint ~ "-" ~ value
+	]) %}
+{% endfor -%}
+
+<div class="{{ _classes | join( " " ) }}"
+     style="{{ max ? 'max-height:' ~ max ~ 'px;'  }}"></div>

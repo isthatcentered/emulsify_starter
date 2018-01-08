@@ -3919,6 +3919,10 @@ invert-kv@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-1.0.0.tgz#104a8e4aaca6d3d8cd157a8ef8bfab2d7a3ffdb6"
 
+ionicons@driftyco/ionicons:
+  version "0.0.0"
+  resolved "https://codeload.github.com/driftyco/ionicons/tar.gz/6811b241e96d99cd3aa0e0ac5dd2f3ed248c5f9a"
+
 ip-regex@^1.0.1:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-1.0.3.tgz#dc589076f659f419c222039a33316f1c7387effd"

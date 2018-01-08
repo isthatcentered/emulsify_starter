@@ -1,0 +1,14 @@
+<article class="_relative">
+	
+	{%- include "@atoms/ratio/ratio.twig" with {
+		breakpoints: breakpoints,
+		type: type,
+		max: max
+	} -%}
+	
+	<div class="_overlay">
+		{%- block content %}
+			{{ content }}
+		{% endblock -%}
+	</div>
+</article>
