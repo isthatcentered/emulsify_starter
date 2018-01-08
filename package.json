@@ -1,0 +1,32 @@
+{
+    "name": "emulsify",
+    "description": "Project template for Drupal 8 themes",
+    "version": "1.0.0",
+    "devDependencies": {
+        "emulsify-gulp": "fourkitchens/emulsify-gulp",
+        "gulp": "^3.9.1"
+    },
+    "scripts": {
+        "prestart": "gulp clean",
+        "start": "concurrently \"gulp compile && gulp theme\"  \"yarn scripts:watch\"",
+        "postinstall": "./scripts/pattern_lab.sh && ./scripts/twig_functions.sh",
+        "scripts": "webpack --display-entrypoints -d",
+        "scripts:watch": "yarn scripts -- -w",
+        "drupal:proxy": "browser-sync start --config bs-config.js"
+    },
+    "precommit.silent": true,
+    "dependencies": {
+        "babel-core": "^6.26.0",
+        "babel-loader": "^7.1.2",
+        "babel-plugin-transform-class-properties": "^6.24.1",
+        "babel-preset-env": "^1.6.1",
+        "bootstrap": "4.0.0-beta.3",
+        "css-loader": "^0.28.8",
+        "glob": "^7.1.2",
+        "inline-source-map": "^0.6.2",
+        "jquery": "^3.2.1",
+        "popper.js": "^1.12.9",
+        "style-loader": "^0.19.1",
+        "webpack": "^3.10.0"
+    }
+}
