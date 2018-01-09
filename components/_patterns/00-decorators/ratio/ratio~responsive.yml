@@ -21,8 +21,5 @@
 #
 #- name: Responsive
 #  context:
-type: movie-poster
 breakpoints:
-  sm: tv-poster
-  md: movie-poster
   lg: movie

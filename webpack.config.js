@@ -49,6 +49,15 @@ module.exports = {
 				use: [ 'style-loader', 'css-loader' ]
 			},
 			{
+				test: /\.(png|jpg|gif)$/,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {}
+					}
+				]
+			},
+			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
@@ -62,7 +71,8 @@ module.exports = {
 							} ],
 						],
 						plugins: [
-							"transform-class-properties" // Allows method = _ => {}
+							"transform-class-properties", // Allows method = _ => {}
+							"transform-object-rest-spread"
 						]
 					},
 				},

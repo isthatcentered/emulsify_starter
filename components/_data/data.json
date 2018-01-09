@@ -1,4 +1,5 @@
 {
+    "isLab": true,
     "media": "<img src=\"../../images/fpo_16x9.png\" alt=\"\">",
     "title": "Pattern Lab",
     "htmlClass": "pl",

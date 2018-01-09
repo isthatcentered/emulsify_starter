@@ -1,0 +1,37 @@
+{# Base class name #}
+{% set seed = "-ratio" %}
+
+{# => -ratio- #}
+{% set seed_modifier = seed ~ "-" %}
+
+{# Add base class name + modifier #}
+{% set _classes = [
+	"_relative",
+	"d-flex",
+	"justify-content-center",
+	"flex-column",
+	seed,
+	type ? seed_modifier ~ type,
+] | merge( classes | default( [] )) %}
+
+{# Add responsive modifiers if any #}
+{%- for breakpoint, value in breakpoints %}
+	{% set _classes = _classes | merge([
+		seed_modifier ~ breakpoint ~ "-" ~ value
+	]) %}
+{% endfor -%}
+
+{# Setting up content used inside low grav decorator#}
+{%- set _content %}
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
+{% endset -%}
+
+<div class="{{ _classes | join( " " ) }}">
+	{%- embed "@decorators/low-gravity/low-gravity.twig" %}
+		{%- block content %}
+			{{ _content }}
+		{% endblock -%}
+	{% endembed -%}
+</div>

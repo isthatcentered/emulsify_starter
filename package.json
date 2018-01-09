@@ -3,8 +3,11 @@
     "description": "Project template for Drupal 8 themes",
     "version": "1.0.0",
     "devDependencies": {
+        "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "emulsify-gulp": "fourkitchens/emulsify-gulp",
-        "gulp": "^3.9.1"
+        "file-loader": "^1.1.6",
+        "gulp": "^3.9.1",
+        "owl.carousel": "^2.2.0"
     },
     "scripts": {
         "prestart": "gulp clean",

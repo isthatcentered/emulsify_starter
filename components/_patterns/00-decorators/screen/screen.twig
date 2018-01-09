@@ -1,14 +1,16 @@
-<article class="_relative">
+<article class="_relative {{ isLab ? "__lab-debug" }}">
 	
-	{%- include "@atoms/ratio/ratio.twig" with {
-		breakpoints: breakpoints,
-		type: type,
-		max: max
+	{%- set _media %}
+		{%- block media %}
+			{{ media }}
+		{% endblock -%}
+	{% endset -%}
+	
+	{%- include "@atoms/media/media-overlay.twig" with {
+		media: _media
 	} -%}
 	
-	<div class="_overlay">
-		{%- block content %}
-			{{ content }}
-		{% endblock -%}
-	</div>
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
 </article>

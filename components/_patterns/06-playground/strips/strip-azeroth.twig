@@ -1,0 +1,38 @@
+{%- embed "@decorators/screen/screen.twig" %}
+	
+	{%- block media %}
+		<img src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/QGYGSTJRRGMS1511224094560.jpg" alt="">
+	{% endblock -%}
+	
+	{%- block content %}
+		
+		{%- embed "@decorators/ratio/ratio.twig" with {
+			type: "tv",
+			breakpoints: {
+				sm: "movie"
+			}
+		} -%}
+			{%- block content %}
+				{%- embed "@decorators/container/container.twig" with {
+					classes: [
+						"text-right"
+					]
+				} %}
+					{%- block content %}
+						<h2 class="text-white">Battle for Azeroth dévoilé</h2>
+						<p>Un nouveau chapitre de la saga épique de Warcraft commencera prochainement. Découvrez ce que l’avenir réserve à World of Warcraft : les nouvelles fonctionnalités, mécaniques de jeu, etc !</p>
+						<button>Regarder</button>
+						<button>En savoir plus</button>
+					{% endblock -%}
+				{% endembed -%}
+			{% endblock -%}
+		{% endembed %}
+		
+		{#<div class="_overlay">#}
+		{#{%- include "@decorators/low-gravity/low-gravity.twig" with {#}
+		{#content: _content#}
+		{#}-%}#}
+		{#</div>#}
+	
+	{% endblock -%}
+{% endembed -%}

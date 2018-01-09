@@ -1,0 +1,13 @@
+{% set _classes = [
+	"",
+] | merge(classes | default([]) )| join(" ")  %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-12 {{ _classes }}">
+			{%- block content %}
+				{{ content }}
+			{% endblock -%}
+		</div>
+	</div>
+</div>
