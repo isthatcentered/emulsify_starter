@@ -1,0 +1,32 @@
+.js-carousel-nav-dot {
+	
+	
+	
+	height:     6px;
+	width:      60px;
+	border:     none;
+	margin:     0 $spacer/2;
+	background: white;
+	flex-grow:  1;
+	opacity:    .3;
+	cursor: pointer;
+	
+	@include media-breakpoint-up(md) {
+		flex-grow: 0;
+	}
+	
+	@include media-breakpoint-up(xl) {
+		width: 100px;
+	}
+}
+
+.js-carousel-nav-dot.active,
+.js-carousel-nav-dot:not(.active):hover {
+	background: theme-color();
+}
+
+.js-carousel-nav-dot.active {
+	pointer-events: none;
+	opacity: .6;
+}
+

@@ -1,0 +1,82 @@
+
+.-container {
+	
+	@include media-breakpoint-up(sm) {
+		max-width: map-get($container-max-widths, "sm");
+	}
+	
+	@include media-breakpoint-up(md) {
+		max-width: map-get($container-max-widths, "md");
+	}
+	
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, "lg");
+	}
+	
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, "xl");
+	}
+	
+	width: 100%;
+}
+
+.-container-sm {
+	
+	@include media-breakpoint-up(sm) {
+		max-width: map-get($container-max-widths, "sm");
+	}
+	
+	@include media-breakpoint-up(md) {
+		max-width: map-get($container-max-widths, "md");
+	}
+	
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, "lg");
+	}
+	
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, "xl");
+	}
+	
+	width: 100%;
+}
+
+.-container-md {
+	
+	
+	@include media-breakpoint-up(md) {
+		max-width: map-get($container-max-widths, "md");
+	}
+	
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, "lg");
+	}
+	
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, "xl");
+	}
+	
+	width: 100%;
+}
+.-container-lg {
+	
+	
+	@include media-breakpoint-up(lg) {
+		max-width: map-get($container-max-widths, "lg");
+	}
+	
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, "xl");
+	}
+	
+	width: 100%;
+}
+
+.-container-xl {
+	
+	@include media-breakpoint-up(xl) {
+		max-width: map-get($container-max-widths, "xl");
+	}
+	
+	width: 100%;
+}

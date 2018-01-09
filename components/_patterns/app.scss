@@ -63,16 +63,63 @@
 
 
 
-.__debug {
+.__debug-height {
 	
 }
+
+.__debug-layout {
+
+}
+
 .sg-pattern-example {
 	
-	* {
-		box-shadow: 0 0 0 1px red;
-	}
-
+	//* {
+	//	box-shadow: 0 0 0 1px red;
+	//}
+	//
 	//.__lab-min-heigh {
 	//	min-height: 100px;
 	//}
+}
+
+
+
+
+
+// Breakpoint checker ================================================
+body.is-dev:after,
+#sg-patterns:after {
+	content:    'xs';
+	display:    block;
+	padding:    5px 10px;
+	position:   fixed;
+	z-index:    9999;
+	right:      0;
+	top:        0;
+	color:      black;
+	background: lightgray;
+}
+
+@include media-breakpoint-up(sm) {
+	body.is-dev:after,
+	#sg-patterns:after {
+		content:    'sm';
+		background: hotpink;
+	}
+}
+
+@include media-breakpoint-up(md) {
+	body.is-dev:after,
+	#sg-patterns:after {
+		content:    'md';
+		background: purple;
+	}
+}
+
+@include media-breakpoint-up(lg) {
+	body.is-dev:after,
+	#sg-patterns:after {
+		content:    'lg';
+		background: greenyellow;
+	}
 }

@@ -1,0 +1,46 @@
+.js-carousel-nav {
+	
+	&-next {
+		right: 0;
+		
+		@include media-breakpoint-up(lg) {
+			margin-right: -($grid-gutter-width/2);
+		}
+	}
+	
+	&-prev {
+		left: 0;
+		
+		@include media-breakpoint-up(lg) {
+			margin-left: -($grid-gutter-width/2);
+		}
+	}
+	
+	& {
+		position:         absolute;
+		top:              0;
+		height:           80px;
+		width:            40px;
+		margin-top:       -40px; //transform: translateY(-50%);
+		background-color: rgba(0, 0, 0, 0.4);
+		border:           solid 1px rgba(255, 255, 255, 0.15);
+		color:            $primary;
+		cursor:           pointer;
+		transition:       .3s;
+		opacity: 0;
+		
+		&:hover {
+			opacity: 0.8;
+		}
+		&.disabled {
+			opacity: 0;
+		}
+	}
+}
+
+.js-carousel-container:hover {
+	
+	.js-carousel-nav:not(.disabled) {
+		opacity: 1;
+	}
+}

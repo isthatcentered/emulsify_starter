@@ -1,0 +1,26 @@
+
+<div class="js-carousel-container owl-theme owl-carousel"
+	{%- for attr, value in data %}
+		data-{{ attr }}="{{ value }}"
+	{% endfor -%}
+>
+	
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
+	
+	
+	<nav class="_overlay">
+		{%- block nav %}
+			{# Prev button must have class "js-carousel-nav-prev" #}
+			{# Next button must have class "js-carousel-nav-next" #}
+			{{ nav }}
+		{% endblock -%}
+	</nav>
+	<nav class="_pin _pin-bottom _pin-left _pin-right _over d-flex justify-content-center pb-2 pb-lg-3">
+		{%- block dots %}
+			{# Each dot must have class js-carousel-nav-dot #}
+			{{ dots }}
+		{% endblock -%}
+	</nav>
+</div>

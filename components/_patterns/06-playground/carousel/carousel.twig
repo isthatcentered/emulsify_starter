@@ -1,40 +1,43 @@
-<div class="js-carousel-container owl-theme owl-carousel"
-     data-items="1"
-     data-nav="true"
-     data-dots="true"
-     data-theme-arrows="true">
-	
-	<ul class="list-unstyled">
-		<li class="js-carousel-item">
-			<img src="http://via.placeholder.com/1000x100" alt="">
-		</li>
-		<li class="js-carousel-item">
-			<img src="http://via.placeholder.com/1000x100" alt="">
-		</li>
-		<li class="js-carousel-item">
-			<img src="http://via.placeholder.com/1000x100" alt="">
-		</li>
-		<li class="js-carousel-item">
-			<img src="http://via.placeholder.com/1000x100" alt="">
-		</li>
-	</ul>
-	
-	<nav>
-		<ul>
-			<li>
-				<!-- Make this a block to place custom controls-->
-				<button class="js-carousel-nav-prev">Prev</button>
+{%- embed "@decorators/carousel/carousel.twig" with {
+	data: {
+		items: 1,
+		nav: false,
+		dots: false,
+	}
+}-%}
+	{%- block content %}
+		<ul class="">
+			<li class="js-carousel-item">
+				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
 			</li>
-			<li >
-				<!-- Make this a block to place custom controls-->
-				<button class="js-carousel-nav-next">Next</button>
+			<li class="js-carousel-item">
+				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
+			</li>
+			<li class="js-carousel-item">
+				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
+			</li>
+			<li class="js-carousel-item">
+				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
 			</li>
 		</ul>
-	</nav>
-	<div class="js-carousel-dots">
-		<button class="js-carousel-nav-dot owl-dot"></button>
-		<button class="js-carousel-nav-dot owl-dot"></button>
-		<button class="js-carousel-nav-dot owl-dot"></button>
-		<button class="js-carousel-nav-dot owl-dot"></button>
-	</div>
-</div>
+	{% endblock -%}
+	
+	{%- block nav %}
+		{%- include "@atoms/carousel-nav/carousel-nav.twig" -%}
+	{% endblock -%}
+	
+	{%- block dots %}
+		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
+			index: 1
+		}-%}
+		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
+			index: 2
+		}-%}
+		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
+			index: 3
+		}-%}
+		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
+			index: 4
+		}-%}
+	{% endblock -%}
+{% endembed %}

@@ -1,0 +1,23 @@
+
+
+<div class="-container-lg h-100">
+	{%- embed "@decorators/low-gravity/low-gravity.twig"  %}
+		{%- block content %}
+		
+				<ul class="list-unstyled _relative">
+					<li>
+						<button class="js-carousel-nav js-carousel-nav-prev _over">
+							<span class="sr-only">Prev</span>
+							<i class="ion-chevron-left"></i>
+						</button>
+					</li>
+					<li>
+						<button class="js-carousel-nav js-carousel-nav-next _over">
+							<span class="sr-only">Next</span>
+							<i class="ion-chevron-right"></i>
+						</button>
+					</li>
+				</ul>
+		{% endblock -%}
+	{% endembed -%}
+</div>

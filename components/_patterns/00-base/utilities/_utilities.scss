@@ -6,14 +6,44 @@
 	pointer-events: none;
 }
 
-._relative {
-	position: relative;
+@each $breakpoint in map-keys($grid-breakpoints) {
+	
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		
+		._relative#{$infix} {
+			position: relative;
+		}
+	}
 }
 
 ._overlay {
 	position: absolute;
+	top:      0;
+	left:     0;
+	right:    0;
+	bottom:   0;
+}
+
+._over {
+	z-index: 1;
+}
+
+._pin {
+	position: absolute;
+}
+
+._pin-top {
 	top: 0;
-	left: 0;
-	right: 0;
+}
+
+._pin-bottom {
 	bottom: 0;
+}
+
+._pin-left {
+	left: 0;
+}
+._pin-right {
+	right: 0;
 }
