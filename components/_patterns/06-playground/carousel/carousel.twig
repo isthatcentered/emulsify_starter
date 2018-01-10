@@ -7,18 +7,19 @@
 }-%}
 	{%- block content %}
 		<ul class="">
-			<li class="js-carousel-item">
-				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
-			</li>
-			<li class="js-carousel-item">
-				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
-			</li>
-			<li class="js-carousel-item">
-				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
-			</li>
-			<li class="js-carousel-item">
-				<a href="#"><img src="http://via.placeholder.com/1000x400" alt=""></a>
-			</li>
+			
+			{%- for i in 0..4 %}
+				{%- embed "@decorators/carousel/carousel-item.twig" with {
+					tag: "li",
+					classes: [],
+				}-%}
+					{%- block content %}
+						<a href="#">
+							<img src="http://via.placeholder.com/1000x400" alt="">
+						</a>
+					{% endblock -%}
+				{% endembed %}
+			{% endfor -%}
 		</ul>
 	{% endblock -%}
 	
@@ -27,17 +28,10 @@
 	{% endblock -%}
 	
 	{%- block dots %}
-		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
-			index: 1
-		}-%}
-		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
-			index: 2
-		}-%}
-		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
-			index: 3
-		}-%}
-		{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
-			index: 4
-		}-%}
+		{%- for i in 0..4 %}
+			{%- include "@atoms/carousel-dot/carousel-dot.twig" with {
+				index: i
+			}-%}
+		{% endfor -%}
 	{% endblock -%}
 {% endembed %}

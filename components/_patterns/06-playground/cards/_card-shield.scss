@@ -1,0 +1,41 @@
+.shield {
+	
+	&:before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		pointer-events: none;
+		box-shadow: inset 0 0 0 2px rgba(153,204,255,.2), inset 0 0 40px rgba(0,102,204,.6), inset 0 0 160px rgba(0,102,204,.4);
+		background-image: linear-gradient(180deg,rgba(0,26,51,0) 50%,rgba(0,26,51,.8));
+		z-index: 1;
+	}
+	
+	&:hover {
+		filter: brightness(1.3);
+	}
+	
+	//i {
+	//	text-shadow: 0 0 4px #0278ff, 0px 0 15px #70b3ff, 0px 0 85px rgba(112, 179, 255, 0.4);
+	//}
+	
+	h3 {
+		font-size: 24px;
+		letter-spacing: 0.15em;
+	}
+	
+	p {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	
+	position: relative;
+	background: black;
+	transition: .2s;
+}
+
+._text-shadow {
+	text-shadow: 0 2px 4px rgba(0,0,0,.8), 0 8px 16px rgba(0,0,0,.6);
+}

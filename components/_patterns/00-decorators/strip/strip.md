@@ -1,0 +1,1 @@
+Makes any content full width of screen

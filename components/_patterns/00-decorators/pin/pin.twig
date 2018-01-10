@@ -1,0 +1,15 @@
+{% set _seed = "_pin" %}
+{% set _classes = [
+	_seed,
+	"_outline",
+	top | default(true) ? _seed ~ "-top",
+	bottom ? _seed ~ "-bottom",
+	left | default(true) ? _seed ~ "-left",
+	right | default(true) ? _seed ~ "-right",
+] | merge(classes | default([]) )| join(" ")  %}
+
+<div class="{{ _classes }}">
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
+</div>

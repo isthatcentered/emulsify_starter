@@ -30,6 +30,7 @@
         "ionicons": "driftyco/ionicons",
         "jquery": "^3.2.1",
         "popper.js": "^1.12.9",
+        "simplelightbox": "^1.12.0",
         "style-loader": "^0.19.1",
         "webpack": "^3.10.0"
     }

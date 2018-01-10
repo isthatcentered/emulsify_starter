@@ -57,6 +57,7 @@
 @import "03-organisms/**/*.scss";
 @import "04-templates/**/*.scss";
 @import "05-pages/**/*.scss";
+@import "06-playground/**/*.scss";
 
 // Utilies are imported last as they need to override any previously set style
 @import "00-base/utilities/utilities";
@@ -83,7 +84,9 @@
 }
 
 
-
+.text-muted-primary {
+	color: $text-muted-primary;
+}
 
 
 // Breakpoint checker ================================================
@@ -123,3 +126,4 @@ body.is-dev:after,
 		background: greenyellow;
 	}
 }
+

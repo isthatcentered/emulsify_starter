@@ -1,0 +1,15 @@
+{# Allows single source of truth for item class name #}
+
+{% set _classes = [
+	"js-lightbox-item",
+] | merge(classes | default([]) )| join(" ") %}
+
+<a class="{{ _classes }}"
+   href="{{ url }}"
+   title="WASSUP?"
+   data-source="{{ source }}"
+   data-caption="{{ caption | raw }}">
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
+</a>

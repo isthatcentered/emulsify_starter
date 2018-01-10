@@ -1,0 +1,13 @@
+{# Allows single source of truth for item class name #}
+
+{% set _tag = tag | default("li") %}
+
+{% set _classes = [
+	"js-carousel-item",
+] | merge(classes | default([]) )| join(" ")  %}
+
+<{{ _tag }} class="{{ _classes }}">
+	{%- block content %}
+		{{ content }}
+	{% endblock -%}
+</{{ _tag }}>

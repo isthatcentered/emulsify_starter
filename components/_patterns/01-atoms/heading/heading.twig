@@ -1,0 +1,11 @@
+
+{% set _classes = [
+	"-heading",
+	"text-uppercase",
+] | merge(classes | default([])) %}
+
+{% set _tag = tag | default("h2") %}
+
+{% set _size =  size | default("_delta") %}
+
+<{{ _tag }} class="{{ _classes | join(" ") }} {{ _size }}">{{ content }}</{{ _tag }}>

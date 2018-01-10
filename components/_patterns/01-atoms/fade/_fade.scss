@@ -1,0 +1,16 @@
+.-fade {
+	position:       absolute;
+	display:        block;
+	bottom:         -1px;
+	left:           0;
+	right:          0;
+	height:         100%;
+	pointer-events: none;
+	background:     linear-gradient(to bottom, rgba($body-bg, 0), rgba($body-bg, 1));
+}
+
+.-fade-reverse {
+	bottom:     auto;
+	top:        -1px;
+	background: linear-gradient(to top, rgba($body-bg, 0), rgba($body-bg, 1));
+}

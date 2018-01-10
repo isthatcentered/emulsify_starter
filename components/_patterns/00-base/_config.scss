@@ -128,7 +128,13 @@ $spacers: (
 		          9: ($spacer * 6),
 		          10: ($spacer * 7),
 		          11: ($spacer * 8),
-		          12: ($spacer * 9)
+		          12: ($spacer * 9),
+		          13: ($spacer * 10),
+		          14: ($spacer * 11),
+		          15: ($spacer * 12),
+		          16: ($spacer * 13),
+		          17: ($spacer * 14)
+
           );
 
 // This variable affects the `.h-*` and `.w-*` classes.
@@ -220,18 +226,28 @@ $font-weight-bold:            700 !default;
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+// I reset default font sizes, those usually just get in the way
+$h1-font-size:                $font-size-base;
+$h2-font-size:                $font-size-base;
+$h3-font-size:                $font-size-base;
+$h4-font-size:                $font-size-base;
+$h5-font-size:                $font-size-base;
+$h6-font-size:                $font-size-base;
+
+$alpha-font-size:             $font-size-base * 2;
+$beta-font-size:              $font-size-base * 1.75;
+$gamma-font-size:             $font-size-base * 1.5;
+$delta-font-size:             $font-size-lg;
+$epsilon-font-size:           $font-size-base;
+$zeta-font-size:              $font-size-sm;
 
 $headings-margin-bottom:      $spacer;
 $headings-font-family:        inherit !default;
 $headings-font-weight:        $font-weight-base;
 $headings-line-height:        1.1;
 $headings-color:              inherit !default;
+$headings-letter-spacing:     .15em;
+$headings-text-transform:     uppercase;
 
 $display1-size:               6rem !default;
 $display2-size:               5.5rem !default;
@@ -250,6 +266,7 @@ $lead-font-weight:            $font-weight-light;
 $small-font-size:             80% !default;
 
 $text-muted:                  $gray-600 !default;
+$text-muted-primary:          mix(theme-color(), white, 25%);
 
 $blockquote-small-color:      $gray-600 !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
@@ -606,8 +623,8 @@ $jumbotron-bg:                      $gray-200 !default;
 
 
 // Cards
-$card-spacer-y:                     .75rem !default;
-$card-spacer-x:                     1.25rem !default;
+$card-spacer-y:                     $spacer;
+$card-spacer-x:                     $spacer;
 $card-border-width:                 $border-width !default;
 $card-border-radius:                $border-radius !default;
 $card-border-color:                 rgba($black, .125) !default;

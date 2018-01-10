@@ -1,0 +1,32 @@
+<div class="container">
+	
+	<ul class="row list-unstyled">
+		
+		{%- for i in 0..3 %}
+			<li class="col-12 col-md-6 col-lg-4 mb-3">
+				
+				<article class="card text-center shield border-0" >
+					
+					{%- include "@atoms/media/media-overlay.twig" with {
+						media: '<img style="opacity: .8;" class="w-100 img-fluid" src="https://static.starcraft2.com/dist/images/content/intro-panels/img-mode-tile--coop-dcaca1c60496108d748bb79415b38eab3d3ac912e40d66aad4e14bf229e7470a5ba4f987694b4c2438e2fa8f217f587c7a2abf5129b62b1ce749dd8e2b161fa8.jpg" alt="">'
+					} -%}
+					
+					{%- embed "@decorators/low-gravity/low-gravity.twig" with {
+					} -%}
+						{%- block content %}
+							<div class="py-15 _relative text-center">
+								{#<i class="ion-android-search text-white h1"></i>#}
+							</div>
+						{% endblock -%}
+					{% endembed %}
+					
+					<div class="card-body pb-5 _relative _over">
+						<h3 class="text-uppercase text-white _text-shadow">Missions en coop</h3>
+						<p class="text-muted mb-5 _text-shadow">Joignez vos forces à celles d’un ami pour vous atteler à des missions plus intenses que jamais et améliorez votre commandant à l’aide de puissantes unités et compétences.</p>
+					</div>
+				</article>
+			</li>
+		{% endfor -%}
+	</ul>
+</div>
+

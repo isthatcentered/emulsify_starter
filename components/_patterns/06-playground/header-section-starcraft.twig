@@ -1,0 +1,25 @@
+<header class="_outline _relative">
+	
+	<div class="py-13"></div>
+	
+	{%- embed "@decorators/pin/pin.twig" %}
+		{%- block content %}
+			<img src="https://static.starcraft2.com/dist/images/global/home/home-keyart-960--top-138a0fa4abf0465881e0f544627ad35e5f3a115df677186b34bcb4c4d015a1101286fbfd517486c3ae936fc5459ea6ea22d250faacd8a4e8a6590d6a3407a00f.jpg" alt="">
+		{% endblock -%}
+	{% endembed -%}
+	
+	{%- embed "@decorators/container/container.twig" with {
+		classes: ["text-center"]
+	}%}
+		{%- block content %}
+			// 18, 33, 21
+			<p class="text-muted-primary text-uppercase">Mode de jeu</p>
+			<h1 class="text-white text-uppercase">Jouez à votre façon</h1>
+			<p class="text-muted-primary">Vivez une véritable guerre intergalactique à travers une campagne épique, le meilleur mode multijoueur de sa catégorie, et de trépidantes missions en coop.</p>
+		{% endblock -%}
+	{% endembed -%}
+</header>
+
+<div class="alert alert-danger">
+	Muted primary = mix white, primary
+</div>
